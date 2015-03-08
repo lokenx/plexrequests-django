@@ -1,0 +1,25 @@
+{% extends "plexrequests/base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+<h1>Search results</h1>
+{% if list %}
+    <p>Found the below movies from <a href="http://www.imdb.com">IMDB</a>.</p>
+
+<form name="search_results" method="post" action="/add/" class="form-horizontal">
+    {% csrf_token %}
+    {% for movie, id in list %}
+        <div class="radio">
+            <label>
+                <input type="radio" name="movies" value="{{ id }}" title="{{ movie.title }}" required>{{ movie.title }}
+            </label>
+        </div>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Add Movie to Plex!" class="btn btn-primary">
+</form>
+{% endif %}
+<br>
+<h4>Not find what you were looking for? Try another search <a href="{% url 'plexrequests:search' %}">here</a>!</h3>
+</div>
+{% endblock %}

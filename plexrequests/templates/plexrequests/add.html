@@ -1,0 +1,14 @@
+{% extends "plexrequests/base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    {% if a == "true" %}
+    <h1>Succes!</h1>
+    <p>The movie has been successfully added to the downloader queue and will be added to Plex as soon as possible! If you want to look for another movie hit the link below!</p>
+    {% else %}
+    <h1>Opps!</h1>
+    <p>The movie you've requested appears to already be downloaded or in the download queue. If you want to look for another movie hit the link below!</p>
+    {% endif %}
+<h3><a href="{% url 'plexrequests:search' %}">Search again!</a></h3>
+</div>
+{% endblock %}

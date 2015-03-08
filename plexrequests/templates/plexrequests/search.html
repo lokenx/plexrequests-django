@@ -1,0 +1,19 @@
+{% extends "plexrequests/base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+<h1>Plex Requests!</h1>
+    <p class="lead">Want to watch a movie but it's not currently on Plex?<br>
+        Use the search box below to do a quick IMDB search for a movie!
+    </p>
+<form action="/results/" method="post" class="form-inline">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="search" name="q" class="form-control" placeholder="Movie title" required>
+        </div>
+            <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+{% endblock %}

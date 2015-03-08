@@ -1,0 +1,5 @@
+beautifulsoup4==4.3.2
+Django==1.7.5
+pushbullet.py==0.8.1
+python-magic==0.4.6
+requests==2.5.3
