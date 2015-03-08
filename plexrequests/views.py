@@ -54,7 +54,7 @@ def get_imdb(search_for):
 
 
 def add_to_cp(movie_req):
-    cp_url="youripofcouchpotatowithport+apikey/"
+    cp_url = "youripofcouchpotatowithport+apikey/"
     url2 = cp_url + "media.get/?id=" + movie_req
     cp_reg = requests.get(url2)
     cp_json = cp_reg.json()
