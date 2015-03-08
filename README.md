@@ -13,14 +13,14 @@ There is a pip requirements file included. I'm assuming you've a Django project 
 ##Quick Start
 
 1. Clone the repository into your Django project
-2. Add "plexrequests" to your INSTALLED_APPS setting at the bottom of the list of your settings.py file an a reference to the templates if you don't already have one
+2. Add "plexrequests" to your INSTALLED_APPS setting at the bottom of the list of your settings.py file and a reference to the templates if you don't already have one
     `TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]`
 3. Include the plexrequests URLconf into your projects urls.py as seen below (adjust as per your project needs):
     `url(r'^', include('plexrequests.urls', namespace="plexrequests")),`
 4. Open the views.py file within the plexrequests directory as two smal changes need to be made
     - For CouchPotato to work you need to get your servers IP and API from within settings and copy it in on line 57 for variable cp_url. It should look like example below
-        `http://192.168.0.100:5050/api/abcdefghijk0123456/
+        `http://192.168.0.100:5050/api/abcdefghijk0123456/`
     - For PushBullet enter your API key on line 67 such as below
-        `Pushbullet("abcdefghijk0123456")
+        `Pushbullet("abcdefghijk0123456")`
 5. Run `./manage.py migrate` to get the non-exist models created (they're coming!)
 6. Start up the development server or reset your existing server and you should be able to see the app on `http://127.0.0.1:8000/` or whatever base URL you used in step 2.
