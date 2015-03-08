@@ -55,11 +55,11 @@ def get_imdb(search_for):
 
 def add_to_cp(movie_req):
     cp_url="youripofcouchpotatowithport+apikey/"
-    url2 = "media.get/?id=" + movie_req
+    url2 = cp_url + "media.get/?id=" + movie_req
     cp_reg = requests.get(url2)
     cp_json = cp_reg.json()
     if cp_json['success'] is False:
-        url3 = "movie.add/?identifier=" + movie_req
+        url3 = cp_url + "movie.add/?identifier=" + movie_req
         requests.post(url3)
         url4 = url2
         cp_reg2 = requests.get(url4)
