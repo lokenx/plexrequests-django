@@ -4,6 +4,8 @@ This is a simple Django application that relies on IMDB, CouchPotato and PushBul
 
 This is my first django app/app just in general so it'll be rough around the edges and wrong in many places with unpleasant breakages I haven't found yet. I've warned you!
 
+![plex_requests_search](/screenshots/1plexrequests_search.png]
+
 ## Requirements
 
 There is a pip requirements file included. I'm assuming you've a Django project already that you can add this app too, but if not you can create a simple one and import this application. Also I haven't tested this with the Django app and CouchPotato not being on the same LAN
