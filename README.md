@@ -1,6 +1,10 @@
 #Plex Requests
 
+__Update 2:__ The meteor version of plex requests has switched to my main focus for now. It's got the same features as this version including CP integration. I'm putting a hold on this version for the time being. Check the meteor repo out [here](https://github.com/lokenx/plexrequests-meteor)!
+
 __Update:__ I've also started working on a meteor application that does most of what the Django version does. Why the change? I was playing around with the JS version and wondered if I could make the whole application that way...enter Meteor! I'm bringing it up to the same features the Django one has, and it includes the extra ability to view requested movies as well! Check the repo out [here](https://github.com/lokenx/plexrequests-meteor)!
+
+---
 
 This is a simple Django application that relies on IMDB, CouchPotato and PushBullet to allow Plex users to request movies to be queued for downloading. For those of us with family and friends using our Plex Servers it allows a friendly way for them to requests new Movies with out having to bug you directly!
 
